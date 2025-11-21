@@ -192,7 +192,10 @@
 
       .grid__imgs {
      position: inherit;
-   
+ }
+  .text__h2 {
+     margin-top: 7rem;
+     
  }
  }
 
