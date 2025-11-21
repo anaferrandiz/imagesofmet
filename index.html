@@ -46,9 +46,13 @@
             <div class="wrap__grid">
 
                 <div class="grid__imgs">
-                    <!-- Ací va un gif -->
-                    <img src="assets/nasa/nasa_01.webp" alt="Imagen de la nasa">
+
+                    <picture>
+                        <source srcset="assets/gif_index_s.gif" media="(max-width:1000px)">
+                        <img src="assets/gif_index.gif" alt="Gif images">
+                    </picture>
                 </div>
+
 
                 <div class="grid__text">
                     <p class="description__text">
@@ -56,8 +60,11 @@
                         Aquesta web ha sigut creada per a que forme part del portfoli de programadora web d'Ana
                         Ferràndiz. S'anomena <span class="italic">Images of Met</span> perquè totes les imatges que
                         veuràs a aquesta web són del
-                        museu Metropolità d'Art de Manhattan, a Nova York. El Met va presentar 'Open Access Initiative'
-                        al febrer de 2017 que posa a disposició de qualsevol, baix llicència Creative Commons Zero
+                        museu Metropolità d'Art de Manhattan, a Nova York. El <a href="https://www.metmuseum.org/"
+                            title="metmuseum" target="_blank" rel="noopener noreferrer">Met</a> va presentar <a
+                            href="https://www.metmuseum.org/art/collection/search?showOnly=openAccess" title="metmuseum"
+                            target="_blank" rel="noopener noreferrer"> 'Open Access Initiative'</a> al febrer de 2017
+                        que posa a disposició de qualsevol, baix llicència Creative Commons Zero
                         (CC0), moltes imatges d'obres d'art de domini públic i les dades bàsiques de totes les obres
                         catalogades a la seua col·lecció. Qualsevol persona amb accés a internet pot descarregar i
                         compartir les obres de la col·lecció pública del Met.
@@ -76,7 +83,7 @@
                     </p>
 
                     <h2 class="text__h2">
-                        Projectes
+                        Obra
                     </h2>
 
                     <div class="projects__links">
@@ -91,6 +98,14 @@
 
                         <a href="josenegretti.html" title="José Negretti" target="_self">José Negretti</a>
 
+                        <a href="cameron.html" title="Julia Margaret Cameron" target="_self">Julia Margaret Cameron</a>
+
+                        <a href="nasa.html" title="Nasa" target="_self">NASA</a>
+
+                        <a href="talbot.html" title="William Fox Talbot" target="_self">William Fox Talbot</a>
+
+                        <a href="Sullivan.html" title="Timothy H. O'Sullivan" target="_self">Timothy H. O'Sullivan</a>
+
 
                     </div>
                 </div>
@@ -100,6 +115,38 @@
     </main>
 
     <!-- *************** FIN MAIN *************** -->
+
+
+
+    <!-- *************** INICIO FOOTER *************** -->
+
+    <footer class="footer">
+
+        <div class="wrap__footer">
+            <div class="footer__info">
+                <p>1000 Fifth Avenue</p>
+                <p>New York, NY 10028</p>
+            </div>
+            <div class="footer__info">
+                <a href="mailto:communications@metmuseum.org">communications@metmuseum.org</a>
+                <p> (212) 570-3951</p>
+            </div>
+            <div class="footer__info">
+                <a href="https://www.instagram.com/ana.ferrandiz/" title="instagram de Ana" target="_blank"
+                    rel="noopener noreferrer">Instagram</a>
+                <a href="https://github.com/anaferrandiz" title="Github de Ana" target="_blank"
+                    rel="noopener noreferrer">Github</a>
+            </div>
+            <div class="footer__info">
+                <p>Images of Met</p>
+                <p>Open Access Initiative</p>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- *************** FIN FOOTER *************** -->
 
 
 </body>
