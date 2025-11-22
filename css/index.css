@@ -140,7 +140,7 @@
 
  .description__text {
      padding-top: 2rem;
-          font-size: 1.7em;
+     font-size: 1.7em;
 
  }
 
@@ -154,7 +154,7 @@
      /* color: rgb(187, 187, 187); */
  }
 
- .text__h2 {
+ .text__h3 {
      font-size: 1.5em;
      margin-top: 2rem;
      font-weight: 600;
@@ -190,13 +190,14 @@
          font-size: 1em;
      }
 
-      .grid__imgs {
-     position: inherit;
- }
-  .text__h2 {
-     margin-top: 7rem;
-     
- }
+     .grid__imgs {
+         position: inherit;
+     }
+
+     .text__h3 {
+         margin-top: 7rem;
+
+     }
  }
 
  /***************** FIN MAIN *****************/
@@ -206,29 +207,49 @@
  /***************** INICI FOOTER *****************/
 
  .wrap__footer {
-    width: 100%;
-    padding: 1rem 1rem;
-    margin: 9rem 0 1rem 0;
-    font-size: 1.1em;
+     width: 100%;
+     padding: 1rem 1rem;
+     margin: 9rem 0 1rem 0;
+     font-size: 1.1em;
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-between;
+     align-items: center;
  }
 
  @media (max-width: 1200px) {
-    .wrap__footer{
-        padding: .5rem .5rem;
-    }
+     .wrap__footer {
+         padding: .5rem .5rem;
+     }
  }
 
-  @media (max-width: 900px) {
-   .wrap__footer{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-   }
+ @media (max-width: 900px) {
+     .wrap__footer {
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+         gap: 2rem;
+     }
  }
+
  /***************** FIN FOOTER *****************/
+
+
+ /* ANNA ATKINS */
+
+ .bold{
+    font-weight: bold;
+ }
+
+ .contendor__credits{
+    max-width: 70%;
+    margin-top: 3rem;
+ }
+
+ .paddingtop{
+    padding-top: 1rem;
+    font-size:1em ;
+ }
+
+ .underline{text-decoration: underline;}
