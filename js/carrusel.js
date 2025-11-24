@@ -53,43 +53,46 @@
     });
 
     // ---------- Swipe ----------
-    let pointerDown = false;
-    let startX = 0;
-    let deltaX = 0;
-    let width = carousel.clientWidth;
+let pointerDown = false;
+let startX = 0;
+let deltaX = 0;
+let width = carousel.clientWidth;
 
-    slidesEl.addEventListener('pointerdown', (e) => {
-      pointerDown = true;
-      startX = e.clientX;
-      deltaX = 0;
-      slidesEl.setPointerCapture && slidesEl.setPointerCapture(e.pointerId);
-      slidesEl.style.transition = 'none';
-    });
+carousel.addEventListener('pointerdown', (e) => {
+  pointerDown = true;
+  startX = e.clientX;
+  deltaX = 0;
 
-    slidesEl.addEventListener('pointermove', (e) => {
-      if (!pointerDown) return;
-      deltaX = e.clientX - startX;
-      const percent = (deltaX / width) * 100;
-      updateTransform(false, percent);
-    });
+  // IMPORTANTE: NO usamos pointerCapture
+  slidesEl.style.transition = 'none';
+});
 
-    function endSwipe(e) {
-      if (!pointerDown) return;
-      pointerDown = false;
+carousel.addEventListener('pointermove', (e) => {
+  if (!pointerDown) return;
 
-      const threshold = width * 0.12;
+  deltaX = e.clientX - startX;
+  const percent = (deltaX / width) * 100;
+  updateTransform(false, percent);
+});
 
-      if (deltaX < -threshold) goTo((current + 1) % count);
-      else if (deltaX > threshold) goTo((current - 1 + count) % count);
-      else goTo(current);
+function endSwipe(e) {
+  if (!pointerDown) return;
+  pointerDown = false;
 
-      try { slidesEl.releasePointerCapture(e.pointerId); } catch (_) {}
-      deltaX = 0;
-    }
+  const threshold = width * 0.12;
 
-    slidesEl.addEventListener('pointerup', endSwipe);
-    slidesEl.addEventListener('pointerleave', endSwipe);
-    slidesEl.addEventListener('pointercancel', endSwipe);
+  if (deltaX < -threshold) goTo((current + 1) % count);
+  else if (deltaX > threshold) goTo((current - 1 + count) % count);
+  else goTo(current);
+
+  deltaX = 0;
+}
+
+carousel.addEventListener('pointerup', endSwipe);
+carousel.addEventListener('pointerleave', endSwipe);
+carousel.addEventListener('pointercancel', endSwipe);
+
+
 
     // Recalcular ancho en resize
     window.addEventListener('resize', () => {
